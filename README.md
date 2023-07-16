@@ -1,1 +1,2 @@
-# GB_Python_HomeWork
+### GB_Python_HomeWork
+*Домашние задания для проверки по теме "Знакомство с языком Python"
