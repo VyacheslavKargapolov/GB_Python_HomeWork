@@ -9,3 +9,34 @@
 
 3 1 2 4 """
 
+import random
+print("Введите количество кустов (не мение 3):")
+n = int(input())
+N = []
+i=0
+while i<n:
+  N.append(random.randint(0, 50))
+  i +=1
+print(f"Количество ягод на кустах от первого до последнего:")
+print(*N)
+
+s1 = N[0] +N[1] + N[n-1] #напротив 1 куста
+s2 = N[0] +N[n-2] + N[n-1] # напротив последнего куста
+
+
+if s1 > s2:
+  SumMax = s1
+  j = 1
+else:
+  SumMax = s2
+  j = n
+
+i = 1
+while i < len(N)-1:
+  sumi = N[i-1]+N[i]+N[i+1]
+  if sumi > SumMax:
+    SumMax = sumi
+    j = i+1
+  i+=1
+print(f"Максимальное число ягод можно собрать стоя перед кустом: № {j} -", SumMax, "шт.")
+
