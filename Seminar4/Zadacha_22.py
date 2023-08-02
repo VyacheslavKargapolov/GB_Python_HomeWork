@@ -12,19 +12,24 @@ m = int(input())
 N = []
 i=0
 while i<n:
-  N.append(random.randint(0, 20))
+  N.append(random.randint(0, 50))
   i +=1
-print(f"Множество 1:\n {N}")
+print(f"Первы набор чисел: {n} элементов")
+print(*N)
 print()
 
 M = []
 i=0
 while i<m:
-  M.append(random.randint(0, 100))
+  M.append(random.randint(0, 50))
   i +=1
-print(f"Множество 2:\n {M}")
-
+print(f"Второй набор чисел: {m} элементов")
+print(*M)
 s = N + M
 s = set(s)
-
-print(s)
+s = list(s)
+s = sorted(s) 
+print()
+L = len(s)
+print(f"Общий список: {L} элементов")
+print(*s)
